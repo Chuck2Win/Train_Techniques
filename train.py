@@ -40,8 +40,9 @@ def train(model, optimizer, criterion, epoch, train_dataloader, val_dataloader, 
             print('='*100)
         ear.check(model,Loss_val)
         if ear.timetobreak:
-            logger.info('epoch : %d ----- Train END : %.4f'%(epoch))
-            print('epoch : %d ----- Train END : %.4f'%(epoch))    
+            logger.info('epoch : %d ----- Train END'%(epoch))
+            print('epoch : %d ----- Train END'%(epoch))    
             return Loss
     logger.info('train end')
+    torch.save(model, ear.save_dir)
     return Loss    
