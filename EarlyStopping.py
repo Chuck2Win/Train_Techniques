@@ -8,7 +8,7 @@ class EarlyStopping(object):
     def __init__(self, patience, save_dir, min_difference=0.):
         self.patience = patience
         self.min_difference = min_difference
-        self.min_loss = float(inf)
+        self.min_loss = float('inf')
         self.min_model = None
         self.min_count = 0
         self.timetobreak = False
