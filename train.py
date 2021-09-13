@@ -1,4 +1,4 @@
-def train(model, optimizer, criterion, epoch, train_dataloader, val_dataloader, logger):
+def train(model, optimizer, criterion, epoch, train_dataloader, val_dataloader, logger,ear):
     # BERT
     Loss = []
     for epoch in tqdm(range(1,epoch+1)):
